@@ -53,7 +53,7 @@ export function FrameButton({
   )
 
   if (props.as === 'link') {
-    const { as, href, ...anchorProps } = props
+    const { as: _as, href, ...anchorProps } = props
     return (
       <a href={href} className={styles} {...anchorProps}>
         {content}
@@ -61,7 +61,7 @@ export function FrameButton({
     )
   }
 
-  const { as, ...buttonProps } = props
+  const { as: _as, ...buttonProps } = props
   return (
     <button className={styles} {...buttonProps}>
       {content}
